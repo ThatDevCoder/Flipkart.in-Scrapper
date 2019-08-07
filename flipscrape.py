@@ -9,7 +9,7 @@ page = requests.get(URL, headers=headers)
 soup = BeautifulSoup(page.content , 'html.parser')
 links = soup.find_all("a", class_="_2cLu-l")
 price = soup.find_all("div" , class_="_1vC4OE")
-for link in links[:5]:
+for link in links[:10]:
     title = link.get('title')
     print(title)
 for prices in price[:5]:
